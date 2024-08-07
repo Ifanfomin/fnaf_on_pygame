@@ -3,7 +3,8 @@ import sys
 
 
 class EventHandler(object):
-    def title_screen_handler(self, events):
+    @staticmethod
+    def title_screen_handler(events: list):
         for event in events:
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -18,7 +19,8 @@ class EventHandler(object):
                     pygame.mixer.music.play(-1)
                     return scene
 
-    def office_screen_handler(self, events):
+    @staticmethod
+    def office_screen_handler(events: list):
         for event in events:
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -38,7 +40,8 @@ class EventHandler(object):
                 elif event.key == pygame.K_LSHIFT:  # открыть ЭВМ
                     return "pc_open"
 
-    def cameras_number_handler(self, events):
+    @staticmethod
+    def cameras_number_handler(events: list):
         for event in events:
             if event.type == pygame.QUIT:
                 sys.exit()

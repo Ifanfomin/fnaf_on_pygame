@@ -1,5 +1,6 @@
 from src.event_handler import EventHandler
-from src.screens import *
+from src.screens.title_screen import TitleScreen
+from src.screens.night_play import NightPlay
 import pygame
 
 
