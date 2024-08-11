@@ -1,8 +1,8 @@
 from pygame import Surface
 
-from src.screens.office_screen import OfficeScreen
-from src.screens.cameras_screen import CamerasScreen
-from src.event_handler import EventHandler
+from src.scripts.screens.office_screen import OfficeScreen
+from src.scripts.screens.cameras_screen import CamerasScreen
+from src.scripts.event_handler import EventHandler
 
 
 

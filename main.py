@@ -1,6 +1,6 @@
-from src.event_handler import EventHandler
-from src.screens.title_screen import TitleScreen
-from src.screens.night_play import NightPlay
+from src.scripts.event_handler import EventHandler
+from src.scripts.screens.title_screen import TitleScreen
+from src.scripts.screens.night_play import NightPlay
 import pygame
 
 
@@ -10,6 +10,7 @@ def main():
     WIDTH = 1920
     HEIGHT = 1080
     FPS = 30
+
     clock = pygame.time.Clock()
     main_screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.toggle_fullscreen()
@@ -21,7 +22,7 @@ def main():
     night = NightPlay(WIDTH, HEIGHT, main_screen)
 
     pygame.display.set_caption("FNAF")
-    pygame.display.set_icon(pygame.image.load("media/images/icon.png"))  # my_fnaf/
+    pygame.display.set_icon(pygame.image.load("src/media/images/icon.png"))  # my_fnaf/
 
     while True:
         if scene == "office":

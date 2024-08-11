@@ -15,7 +15,7 @@ class EventHandler(object):
                     scene = "office"
                     pygame.mixer.music.stop()
                     print("Начало 1 ночи")
-                    pygame.mixer.music.load("media/sounds/background_noise_sound.wav")
+                    pygame.mixer.music.load("src/media/sounds/background_noise_sound.wav")
                     pygame.mixer.music.play(-1)
                     return scene
 

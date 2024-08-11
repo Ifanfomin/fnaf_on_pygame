@@ -1,8 +1,7 @@
-from src.base_funcs import load_images, view_image
-from pygame import mixer as Mixer
+from src.scripts.base_funcs import load_images, view_image
 from pygame import event as Event
 from pygame import Surface
-from src.event_handler import EventHandler
+from src.scripts.event_handler import EventHandler
 from time import time
 
 
@@ -17,15 +16,15 @@ class CamerasScreen(object):
         self.HEIGHT = HEIGHT
         self.main_screen = main_screen
         self.cam_number = "1"
-        self.cams_frames = load_images("media/images/office_screen_images/cameras/cams", WIDTH, HEIGHT)
+        self.cams_frames = load_images("src/media/images/office_screen_images/cameras/cams", WIDTH, HEIGHT)
         self.noise = True
         self.noise_frames = []
         for alpha in range(230, 250, 20):
             [self.noise_frames.append(frame) for frame in
-             load_images("media/images/office_screen_images/cameras/noise", WIDTH, HEIGHT, alpha, "list")]
+             load_images("src/media/images/office_screen_images/cameras/noise", WIDTH, HEIGHT, alpha, "list")]
         for alpha in range(240, 120, -20):
             [self.noise_frames.append(frame) for frame in
-             load_images("media/images/office_screen_images/cameras/noise", WIDTH, HEIGHT, alpha, "list")]
+             load_images("src/media/images/office_screen_images/cameras/noise", WIDTH, HEIGHT, alpha, "list")]
         self.noise_len = len(self.noise_frames)
         self.noise_num = 1
         self.noise_frm_time = 0.1

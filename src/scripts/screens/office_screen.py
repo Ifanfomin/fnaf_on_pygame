@@ -1,10 +1,10 @@
-from src.base_funcs import load_images, view_image
+from src.scripts.base_funcs import load_images, view_image
 from pygame import mixer as Mixer
 from pygame import event as Event
 from pygame import Surface
 from time import time
 
-from src.event_handler import EventHandler
+from src.scripts.event_handler import EventHandler
 
 
 class OfficeScreen(object):
@@ -24,10 +24,10 @@ class OfficeScreen(object):
         self.light = "light"
         self.doors = ["left_4_open", "right_4_open"]
         self.light_on_off_sounds = [
-            Mixer.Sound("media/sounds/light_on_sound.wav"),
-            Mixer.Sound("media/sounds/light_off_sound.wav")
+            Mixer.Sound("src/media/sounds/light_on_sound.wav"),
+            Mixer.Sound("src/media/sounds/light_off_sound.wav")
         ]
-        self.frames = load_images("media/images/office_screen_images/night_office", WIDTH, HEIGHT)
+        self.frames = load_images("src/media/images/office_screen_images/night_office", WIDTH, HEIGHT)
 
     def office_screen(
             self,
